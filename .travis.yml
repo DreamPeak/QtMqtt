@@ -67,3 +67,6 @@ before_script:
 script:
   - make
   - make test
+  
+after_success:
+  - npm install coveralls && cat ./coverage/lcov.info | coveralls
